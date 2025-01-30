@@ -10,9 +10,9 @@ Saída Esperada:
 Dica: Verifique se o elemento atual é uma lista ou um número para decidir se deve
 continuar a recursão.
 """
-import ast
+#import ast
 
-def sum_of_numbers_in_nested_list2(actual_list: list):
+def sum_of_numbers_in_nested_list2(actual_list: list) -> int:
     sum = 0
     for i, element in enumerate(actual_list):
         if isinstance(element, int):
@@ -20,15 +20,11 @@ def sum_of_numbers_in_nested_list2(actual_list: list):
         elif isinstance(element, list):
             sum += sum_of_numbers_in_nested_list2(element)
     return sum
-    
-"""
-examples to use:
-[1, [2, 3], [4, [5, 10]]]
-[1, [2, [2, [1, 6, 2], 3], [[1, 4, 3], 3, 2], [4, [5, 10]]]]
 
-"""
-user_input = input('\nInsert a small text, so that it can be reversed:')
-nested_list = ast.literal_eval(user_input) #!!!
+#examples to use:
+#user_input = input('\nInsert a list of nested lists:')
+#nested_list = ast.literal_eval(user_input) #!!!
 
+nested_list = [1, [2, [2, [1, 6, 2], 3], [[1, 4, 3], 3, 2], [4, [5, 10]]]]
 sum = 0
 print(f'\nThe sum of integers of the list of nested lists is: {sum_of_numbers_in_nested_list2(nested_list)}')

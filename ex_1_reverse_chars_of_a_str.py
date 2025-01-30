@@ -2,7 +2,7 @@
 Escreva uma função recursiva chamada reverter_caracteres(s) que recebe uma
 string s e devolve a string invertida. Não use laços (for ou while)."""
 
-def reverter_chars(user_str: str):
+def reverter_chars(user_str: str) -> None:
     if user_str:
         last_char = user_str[-1]
         new_str = user_str[:-1]
