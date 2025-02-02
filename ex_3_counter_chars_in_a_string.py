@@ -1,14 +1,29 @@
 '''
-Exercício 3: Contar Caracteres em uma String
-Crie uma função recursiva chamada contar_caracteres(s, c) que conta quantas vezes o
-caractere c aparece na string s.
-Exemplo de Entrada:
-contar_caracteres("banana", "a")
-Saída Esperada:
+PURPOSE:
+
+Exercise 3: Count Characters in a String
+Create a recursive function called contar_caracteres(s, c) that counts how many times the character c appears in the string s.
+
+Example Input:
+count_characters("banana", "a")
+
+Expected Output:
 3
 '''
 
 def count_characters(word: str, char: str, amount: int = 0) -> None:
+    """Displays how many times a character appears in a string.
+
+    Checks character by character in a string, via assignment
+    to variable, array, addition in a summation variable and recursion.
+    After checks every character, displays via print how many 
+    times the selected character appears in the string.
+
+    Args:
+        word (str): String where the number of characters will be searched.
+        char (str): Character that will be counted in the string.
+        amount (int, optional): Summation variable that will stores the amount. Defaults to 0.
+    """
     if word:
         last_char = word[-1]
         word = word[:-1]
